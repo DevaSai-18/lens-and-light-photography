@@ -37,6 +37,11 @@ const formMessage = document.getElementById("formMessage");
 const bookingDateInput = document.getElementById("date");
 const dashboardDate = document.getElementById("dashboardDate");
 const bookingTableBody = document.getElementById("bookingTableBody");
+const bookingTableWrap = document.getElementById("bookingTableWrap");
+const toggleBookingsButton = document.getElementById("toggleBookings");
+const dashboardHiddenMessage = document.getElementById("dashboardHiddenMessage");
+const clearAllBookingsButton = document.getElementById("clearAllBookings");
+let bookingsAreHidden = false;
 
 function getBookings() {
   try {
@@ -76,7 +81,7 @@ function renderDashboard() {
     const message = chosenDate
       ? `No bookings found for ${formatDate(chosenDate)}.`
       : "No bookings yet. Submit the booking form above to see it here.";
-    bookingTableBody.innerHTML = `<tr class="empty-row"><td colspan="4">${message}</td></tr>`;
+    bookingTableBody.innerHTML = `<tr class="empty-row"><td colspan="5">${escapeHTML(message)}</td></tr>`;
     return;
   }
 
@@ -86,8 +91,24 @@ function renderDashboard() {
       <td>${escapeHTML(booking.service)}</td>
       <td>${formatDate(booking.date)}</td>
       <td>${escapeHTML(booking.email)}</td>
+      <td><button class="booking-cancel" type="button" data-booking-id="${escapeHTML(booking.id)}">Cancel</button></td>
     </tr>
   `).join("");
+
+  bookingTableBody.querySelectorAll(".booking-cancel").forEach(button => {
+    button.addEventListener("click", () => {
+      const bookingId = button.dataset.bookingId;
+      const bookingToCancel = getBookings().find(item => String(item.id) === String(bookingId));
+      if (!bookingToCancel) return;
+      const confirmed = window.confirm(
+        `Cancel the booking for ${bookingToCancel.name} on ${formatDate(bookingToCancel.date)}?`
+      );
+      if (!confirmed) return;
+      const updatedBookings = getBookings().filter(item => String(item.id) !== String(bookingId));
+      saveBookings(updatedBookings);
+      renderDashboard();
+    });
+  });
 }
 
 function escapeHTML(value) {
@@ -137,6 +158,29 @@ bookingForm.addEventListener("submit", event => {
 dashboardDate.addEventListener("change", renderDashboard);
 
 document.getElementById("clearDateFilter").addEventListener("click", () => {
+  dashboardDate.value = "";
+  renderDashboard();
+});
+
+toggleBookingsButton.addEventListener("click", () => {
+  bookingsAreHidden = !bookingsAreHidden;
+  bookingTableWrap.hidden = bookingsAreHidden;
+  dashboardHiddenMessage.hidden = !bookingsAreHidden;
+  toggleBookingsButton.textContent = bookingsAreHidden ? "Show bookings" : "Hide bookings";
+  toggleBookingsButton.setAttribute("aria-expanded", String(!bookingsAreHidden));
+});
+
+clearAllBookingsButton.addEventListener("click", () => {
+  const bookings = getBookings();
+  if (bookings.length === 0) {
+    window.alert("There are no bookings to clear.");
+    return;
+  }
+  const confirmed = window.confirm(
+    `Permanently delete all ${bookings.length} saved booking(s) from this browser? This cannot be undone.`
+  );
+  if (!confirmed) return;
+  saveBookings([]);
   dashboardDate.value = "";
   renderDashboard();
 });

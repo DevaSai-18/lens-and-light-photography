@@ -115,15 +115,18 @@
         <label for="dashboardDate">Check bookings for a date</label>
         <input type="date" id="dashboardDate">
         <button class="dashboard-clear" type="button" id="clearDateFilter">Show all dates</button>
+        <button class="dashboard-action" type="button" id="toggleBookings" aria-expanded="true">Hide bookings</button>
+        <button class="dashboard-action dashboard-danger" type="button" id="clearAllBookings">Clear all bookings</button>
       </div>
-      <div class="booking-table-wrap">
+      <div class="booking-table-wrap" id="bookingTableWrap">
         <table class="booking-table">
-          <thead><tr><th>Customer</th><th>Service</th><th>Booking date</th><th>Email</th></tr></thead>
+          <thead><tr><th>Customer</th><th>Service</th><th>Booking date</th><th>Email</th><th>Action</th></tr></thead>
           <tbody id="bookingTableBody">
-            <tr class="empty-row"><td colspan="4">No bookings yet. Submit the booking form above to see it here.</td></tr>
+            <tr class="empty-row"><td colspan="5">No bookings yet. Submit the booking form above to see it here.</td></tr>
           </tbody>
         </table>
       </div>
+      <p class="dashboard-hidden-message" id="dashboardHiddenMessage" hidden>Bookings are hidden. Select “Show bookings” to display the saved records again.</p>
       <p class="dashboard-note"><strong>Student project note:</strong> Bookings are stored in this browser using JavaScript localStorage. They are not shared with other devices and may be cleared if browser data is removed.</p>
     </section>
 

@@ -45,3 +45,13 @@ button,input,select,textarea{font:inherit}
  .stat-label{font-size:7px}
  .dashboard-tools{align-items:flex-start;flex-direction:column}
 }
+
+/* Booking dashboard management actions */
+.dashboard-action{border:1px solid var(--line);background:transparent;color:var(--ink);padding:9px 12px;font-size:10px;cursor:pointer;transition:background .2s ease,color .2s ease,border-color .2s ease}
+.dashboard-action:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.dashboard-danger{border-color:#b45b50;color:#9b4037}
+.dashboard-danger:hover{background:#9b4037;border-color:#9b4037;color:#fff}
+.booking-cancel{border:1px solid #b45b50;background:transparent;color:#9b4037;padding:6px 10px;font-size:10px;cursor:pointer}
+.booking-cancel:hover{background:#9b4037;color:#fff}
+.dashboard-hidden-message{border:1px dashed var(--line);padding:20px;color:var(--muted);font-size:11px}
+[hidden]{display:none!important}

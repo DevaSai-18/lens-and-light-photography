@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lens & Light — thoughtful photography for life's unforgettable moments.">
+  <title>Lens & Light | Photography</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Lens and Light home">
+      <span class="brand-mark">L<span>+</span></span>
+      <span class="brand-name">LENS <i>&</i> LIGHT<small>PHOTOGRAPHY STUDIO</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="nav" id="mainNav">
+      <a href="#home">Home</a><a href="#gallery">Gallery</a><a href="#services">Services</a>
+      <a href="#booking">Booking</a><a href="#dashboard">Dashboard</a><a href="#about">About Us</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="header-cta" href="#booking">Let's talk <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-image"></div>
+      <div class="hero-content">
+        <p class="eyebrow light">STORIES IN EVERY FRAME</p>
+        <h1>Life moves.<br><em>We make it</em><br>last forever.</h1>
+        <p class="hero-copy">Honest moments, beautiful light, and photographs you'll come back to for a lifetime.</p>
+        <div class="hero-actions"><a class="button button-light" href="#gallery">Explore gallery <span>↗</span></a><a class="text-link light-link" href="#about">Our story <span>→</span></a></div>
+      </div>
+      <div class="hero-note"><span>01 / 05</span><span>BASED IN COIMBATORE · AVAILABLE EVERYWHERE</span></div>
+      <div class="vertical-label">LENS & LIGHT — EST. 2021</div>
+    </section>
+
+    <section class="intro section-wrap">
+      <p class="eyebrow">A LITTLE ABOUT WHAT WE DO</p>
+      <div class="intro-grid"><h2>Not just pictures.<br><em>Pieces of your story.</em></h2>
+      <div><p class="intro-copy">From quiet landscapes to once-in-a-lifetime celebrations, we capture the feeling behind every moment. Our approach is simple: thoughtful storytelling, natural expressions, and timeless photographs.</p><a class="under-link" href="#about">Get to know us <span>↗</span></a></div></div>
+    </section>
+
+    <section class="gallery-section" id="gallery">
+      <div class="section-wrap">
+        <div class="section-heading"><div><p class="eyebrow">THE PORTFOLIO</p><h2>Frames worth <em>remembering.</em></h2></div><p class="heading-note">A collection of places, people<br>and moments that inspire us.</p></div>
+        <div class="filters" role="group" aria-label="Filter gallery">
+          <button class="filter-btn active" data-filter="all">All work</button>
+          <button class="filter-btn" data-filter="nature">Nature</button>
+          <button class="filter-btn" data-filter="wildlife">Wildlife</button>
+          <button class="filter-btn" data-filter="wedding">Wedding</button>
+          <button class="filter-btn" data-filter="travel">Travel</button>
+          <button class="filter-btn" data-filter="portrait">Portrait</button>
+        </div>
+        <div class="gallery-grid">
+          <article class="photo-card tall" data-category="nature"><img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1000&q=85" alt="Golden sunrise over a misty mountain valley"><div class="photo-caption"><span>01 — NATURE</span><h3>Where the day begins</h3></div></article>
+          <article class="photo-card" data-category="wedding"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=85" alt="Romantic wedding couple"><div class="photo-caption"><span>02 — WEDDING</span><h3>All of a sudden, always</h3></div></article>
+          <article class="photo-card" data-category="wildlife"><img src="https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=1000&q=85" alt="Elephant in a natural habitat"><div class="photo-caption"><span>03 — WILDLIFE</span><h3>Wild and wonderful</h3></div></article>
+          <article class="photo-card" data-category="travel"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=85" alt="Scenic mountain road and landscape"><div class="photo-caption"><span>04 — TRAVEL</span><h3>Take the long way</h3></div></article>
+          <article class="photo-card" data-category="portrait"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1000&q=85" alt="Natural light portrait of a woman"><div class="photo-caption"><span>05 — PORTRAIT</span><h3>Simply, you</h3></div></article>
+          <article class="photo-card wide" data-category="nature"><img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1200&q=85" alt="Quiet lake surrounded by mountains"><div class="photo-caption"><span>06 — NATURE</span><h3>A moment of stillness</h3></div></article>
+        </div>
+        <p class="gallery-footnote">A FEW FAVOURITES FROM OUR COLLECTION <span>✳</span></p>
+      </div>
+    </section>
+
+    <section class="services section-wrap" id="services">
+      <div class="section-heading"><div><p class="eyebrow">WHAT WE OFFER</p><h2>Made for your <em>moments.</em></h2></div><p class="heading-note">A thoughtful approach to every<br>kind of story worth telling.</p></div>
+      <div class="service-list">
+        <article class="service-item"><span class="service-number">01</span><div><h3>Wedding photography</h3><p>Real emotions and all the little details of your big day.</p></div><span class="service-arrow">↗</span></article>
+        <article class="service-item"><span class="service-number">02</span><div><h3>Portrait sessions</h3><p>Personal, relaxed portraits that feel genuinely you.</p></div><span class="service-arrow">↗</span></article>
+        <article class="service-item"><span class="service-number">03</span><div><h3>Nature & wildlife</h3><p>Patiently documenting the beauty of the natural world.</p></div><span class="service-arrow">↗</span></article>
+        <article class="service-item"><span class="service-number">04</span><div><h3>Travel & events</h3><p>Places, people and celebrations captured as they happen.</p></div><span class="service-arrow">↗</span></article>
+      </div>
+    </section>
+
+    <section class="quote-band"><div class="quote-mark">“</div><blockquote>The best thing about a photograph is that it never changes, even when the people in it do.</blockquote><p>— ANDY WARHOL</p></section>
+
+    <section class="about section-wrap" id="about">
+      <div class="about-image"><img src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?auto=format&fit=crop&w=1000&q=85" alt="Camera on a photographer's desk"><span class="image-stamp">THE ART OF<br>NOTICING</span></div>
+      <div class="about-copy"><p class="eyebrow">BEHIND THE CAMERA</p><h2>Hello, we're<br><em>Lens & Light.</em></h2><p>We are a small, passionate photography studio based in Coimbatore. We believe the most meaningful photographs are not forced — they're noticed, felt and carefully preserved.</p><p>Whether it's a celebration, a new place or a simple everyday moment, we're here to tell your story with care.</p><a class="under-link" href="#booking">Let's create something <span>↗</span></a></div>
+    </section>
+
+    <section class="booking-section" id="booking">
+      <div class="booking-inner">
+        <div><p class="eyebrow light">HAVE A STORY IN MIND?</p><h2>Let's make<br><em>something lasting.</em></h2><p class="booking-copy">Tell us a little about what you're planning. We'll get back to you to discuss the details.</p><div class="booking-detail"><span>✳</span><p>Taking bookings for weddings, portraits, travel and special events.</p></div></div>
+        <form class="booking-form" id="bookingForm">
+          <div class="form-row"><label for="fullName">Your name</label><input id="fullName" name="name" type="text" placeholder="e.g. Priya Kumar" required></div>
+          <div class="form-row"><label for="email">Email address</label><input id="email" name="email" type="email" placeholder="you@example.com" required></div>
+          <div class="form-row"><label for="service">What do you need?</label><select id="service" name="service" required><option value="">Choose a service</option><option>Wedding photography</option><option>Portrait session</option><option>Nature & wildlife</option><option>Travel & events</option></select></div>
+          <div class="form-row"><label for="date">Preferred date</label><input id="date" name="date" type="date"></div>
+          <div class="form-row"><label for="message">Tell us more</label><textarea id="message" name="message" rows="3" placeholder="A few details about your idea..."></textarea></div>
+          <button class="button button-light submit-button" type="submit">Send enquiry <span>↗</span></button>
+          <p class="form-message" id="formMessage" role="status"></p>
+          <p class="form-disclaimer">Student project demo: bookings are saved only in this browser using localStorage.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+
+    <section class="dashboard-section section-wrap" id="dashboard">
+      <div class="section-heading">
+        <div><p class="eyebrow">BOOKING MANAGEMENT</p><h2>Booking <em>dashboard.</em></h2></div>
+        <p class="heading-note">View bookings saved in this browser<br>and check date-wise availability.</p>
+      </div>
+      <div class="dashboard-stats">
+        <div class="stat-card"><span class="stat-number" id="totalBookings">0</span><span class="stat-label">TOTAL BOOKINGS</span></div>
+        <div class="stat-card"><span class="stat-number" id="selectedDateCount">0</span><span class="stat-label">BOOKINGS ON SELECTED DATE</span></div>
+        <div class="stat-card"><span class="stat-number" id="uniqueDates">0</span><span class="stat-label">DATES WITH BOOKINGS</span></div>
+      </div>
+      <div class="dashboard-tools">
+        <label for="dashboardDate">Check bookings for a date</label>
+        <input type="date" id="dashboardDate">
+        <button class="dashboard-clear" type="button" id="clearDateFilter">Show all dates</button>
+      </div>
+      <div class="booking-table-wrap">
+        <table class="booking-table">
+          <thead><tr><th>Customer</th><th>Service</th><th>Booking date</th><th>Email</th></tr></thead>
+          <tbody id="bookingTableBody">
+            <tr class="empty-row"><td colspan="4">No bookings yet. Submit the booking form above to see it here.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="dashboard-note"><strong>Student project note:</strong> Bookings are stored in this browser using JavaScript localStorage. They are not shared with other devices and may be cleared if browser data is removed.</p>
+    </section>
+
+  <footer class="footer" id="contact">
+    <div class="footer-top"><a class="brand footer-brand" href="#home"><span class="brand-mark">L<span>+</span></span><span class="brand-name">LENS <i>&</i> LIGHT<small>PHOTOGRAPHY STUDIO</small></span></a><p>Good photographs make<br>memories feel close.</p><a class="back-top" href="#home">BACK TO TOP ↑</a></div>
+    <div class="footer-grid"><div><p class="footer-label">FIND US</p><p>Coimbatore, Tamil Nadu<br>India — 641001</p></div><div><p class="footer-label">SAY HELLO</p><a href="tel:+919876543210">+91 98765 43210</a><a href="mailto:hello@lensandlight.example">hello@lensandlight.example</a></div><div><p class="footer-label">FOLLOW ALONG</p><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram ↗</a><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube ↗</a></div></div>
+    <div class="footer-bottom"><span>© <span id="year"></span> LENS & LIGHT PHOTOGRAPHY</span><span>MADE WITH CARE & NATURAL LIGHT</span></div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

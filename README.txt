@@ -38,3 +38,11 @@ Other features
 
 Replace sample contact details with your team's approved details.
 Photographs are loaded from Unsplash URLs, so internet access is needed for them.
+
+
+Dashboard booking management
+----------------------------
+- Cancel: removes one selected booking after confirmation.
+- Hide bookings / Show bookings: hides or reveals the table without deleting records.
+- Clear all bookings: permanently removes all bookings stored in this browser after confirmation.
+- Booking data uses browser localStorage and is not shared between devices.
